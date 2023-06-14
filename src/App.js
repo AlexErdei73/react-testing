@@ -1,7 +1,22 @@
 // App.js
 
-import React from "react";
+import React, { useState } from "react";
 
-const App = () => <h1>Our First Test</h1>;
+function App() {
+	const [heading, setHeading] = useState("Magnificient Monkeys");
+
+	function handleClick() {
+		setHeading("Radical Rhinos");
+	}
+
+	return (
+		<>
+			<button type="button" onClick={handleClick}>
+				Click Me
+			</button>
+			<h1>{heading}</h1>
+		</>
+	);
+}
 
 export default App;
